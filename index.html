@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Simple Math Operator Game</title>
+</head>
+
+<body>
+    <h1 id="heading">Simple Math Game</h1>
+     
+        <form name="Input_Name" onSubmit="submitf()">
+                <label class="name">Name:</label>
+                <input id="Name" name="Name" type="text" /><br>
+
+                <label class="name">Level:</label>
+                    <input type="radio" name="level" value="beginner"> Beginner
+                    <input type="radio" name="level" value="medium"> Medium
+                    <input type="radio" name="level" value="advanced"> Advanced <br>
+                    
+        </form>
+    </br>
+        <p class="score">Your score is: <span id="score">0</span></p>
+        
+    <div class=row>
+        
+        <div class="col-md-3">
+            <button class="button" onclick="setAdditionGame()">Addition</button>
+        </div>
+        <div class="col-md-3">
+            <button class="button" onclick="setMultiplicationGame()">Multiplication</button>
+        </div>
+        <div class="col-md-3">
+            <button class="button" onclick="setSubtractionGame()">Subtraction</button>
+        </div>
+        
+        <div class="col-md-3">
+            <button class="button" onclick="setDivisionGame()">Division</button>
+        </div>
+    </div>
+
+
+   
+    <p id="question"></p>
+
+    <form id="quizForm" name="answerForm" onsubmit="checkAnswer();
+     return false;" action="#" data-gametype="addition">
+
+        Answer: <input type="number" name="answer">
+        <input type="hidden" name="rightAnswer">
+        <input class="submit" type="submit" value="submit">
+
+    </form>
+
+    <script type="text/javascript" src="js/mathsgame.js"></script>
+</body>
+
+</html>
